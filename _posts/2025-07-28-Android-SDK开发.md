@@ -168,8 +168,17 @@ version = "1.0.0"             // 你要发布的版本号
 
   ```bash
   git tag v1.0.0
-  git push origin v1.0.0
+  git push main v1.0.0
   ```
+
+  **注意：如果想删除tag可使用如下命令**：
+
+  ```bash
+  git tag -d v1.0.0 
+  git push main :refs/tags/v1.0.0  
+  ```
+
+  
 
 - **如何使用？**
 
@@ -188,7 +197,7 @@ version = "1.0.0"             // 你要发布的版本号
   - 在 App 中添加依赖
 
   ```kotlin
-  implementation("com.github.yourname:SimpleLogger:1.0.0")
+  implementation("com.github.yourname:SimpleLogger:v1.0.0")
   ```
 
 ### 4、发布到Maven Central（比较繁琐个人项目不推荐）
